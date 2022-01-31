@@ -1,0 +1,444 @@
+.main {
+  transition: margin-left 5s;
+  left: 300px;
+  top: 500px;
+  background-color: rgb(255, 255, 255);
+}
+/* rgb(201, 96, 96); */
+.photoGrid {
+  position: relative;
+  top: -300px;
+  left: 350px;
+  padding: 10px;
+  margin: 5px;
+  height: 350px;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(190, 241, 241);
+  border-radius: 10px;
+  overflow: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.photoGrid img {
+  float: center;
+  margin: auto;
+  padding: 5px 5px;
+  height: 230px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+.photoGrid img:hover {
+  height: 300px;
+}
+
+.names {
+  margin: 5px;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+.names:hover {
+  font-size: 70px;
+}
+.Nav {
+  width: auto;
+  height: 50px;
+  background-color: rgb(83, 80, 80);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.Nav ul {
+  float: right;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+.Nav li {
+  float: left;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  list-style-type: none;
+  border-width: 5px;
+  border: 0px solid rgb(235, 230, 221);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.Nav li:hover {
+  background-color: rgb(138, 127, 127);
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+a:hover {
+  color: cyan;
+}
+
+.portfolio_list:hover .portfolio {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 197px;
+  top: 45px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.portfolio {
+  display: none;
+  background-color: rgb(83, 80, 80);
+}
+.portfolio li {
+  margin: 2px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* sidebar */
+
+.sidebar {
+  position: absolute;
+  top: 14px;
+  left: 0px;
+}
+
+.fabar {
+  width: 100%;
+  margin: auto;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    /* transform: translateX(-100%); */
+    width: 0px;
+  }
+
+  100% {
+    /* transform: translateX(0); */
+    width: 300px;
+  }
+}
+
+.expanded_sidebar {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(190, 241, 241);
+  overflow-x: hidden;
+  padding-top: 60px;
+  animation-name: slideInFromLeft;
+  animation-duration: 1s; /* or: Xms */
+  animation-iteration-count: 1;
+  animation-direction: normal; /* or: normal */
+  animation-timing-function: ease; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: forwards; /* or: backwards, both, none */
+  animation-delay: 0s;
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    width: 300px;
+  }
+
+  100% {
+    width: 0px;
+  }
+}
+.closingBar {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(190, 241, 241);
+  overflow-x: hidden;
+  padding-top: 60px;
+  animation-name: slideOutToLeft;
+  animation-duration: 1s; /* or: Xms */
+  animation-iteration-count: 1;
+  animation-direction: normal; /* or: normal */
+  animation-timing-function: ease; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: forwards; /* or: backwards, both, none */
+  animation-delay: 0s;
+}
+/* @keyframes demo {
+  0% {
+    transform: translateX(-100%);
+    left: 250px;
+  }
+
+  100% {
+    transform: translateX(0%);
+    left: 650px;
+  }
+}
+
+#expanded_sidebarID {
+  animation: demo 1s infinite;
+  animation-direction: reverse;
+} */
+/* 
+.box {
+  position: relative;
+  margin-left: 25%;
+  margin-bottom: 250px;
+  height: 200px;
+  width: 200px;
+  background-color: coral;
+  border: 0.5px solid thistle;
+  animation: 0.5s ease-in 0s 1 demo;
+  animation: demo 1s infinite;
+  animation-direction: reverse;
+} */
+.github {
+  position: relative;
+  top: -300px;
+}
+.github img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+}
+
+.github img:hover {
+  height: 75px;
+  width: 80px;
+  border-radius: 10%;
+}
+.github ul {
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+  height: 180vh;
+}
+.github li {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(190, 241, 241);
+  padding: 10px;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  margin: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.github li:hover {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.github h3 {
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.github a {
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 15px;
+  color: #111;
+}
+
+.close_button {
+  position: absolute;
+  top: 0px;
+  height: 50px;
+  width: 300px;
+}
+.close_button h4 {
+  position: absolute;
+  top: -35px;
+  left: 20%;
+  font-size: 1.7rem;
+  height: 50px;
+}
+.closeIcon {
+  position: absolute;
+  left: 70px;
+  top: 5px;
+}
+
+.close_button:hover {
+  background-color: rgb(128, 179, 130);
+}
+
+.form-container {
+  position: relative;
+  width: 360px;
+  height: 385px;
+  top: -680px;
+  margin-left: 750px;
+  border-radius: 0px 100px 0px 100px;
+  background-color: rgb(190, 241, 241);
+  /* transform: skew(0deg, 0deg); */
+}
+
+.form {
+  padding: 20px;
+  margin: auto;
+}
+
+.input-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(156, 127, 33);
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.input-box input {
+  float: right;
+  padding: 8px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 15, 10);
+  font-size: 15px;
+  height: 20px;
+  width: 295px;
+  text-align: center;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.input-box input:focus {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border: 0px;
+}
+
+.form-submit {
+  box-sizing: content-box;
+  float: right;
+  margin-top: 10px;
+  border: 0px;
+  height: 40px;
+  width: 70px;
+  font-size: 20px;
+  background-color: rgb(96, 180, 151);
+  color: white;
+  border-radius: 5px;
+  /* transform: skew(10deg, 5deg); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-submit:active {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border: 0px;
+}
+
+.input-box .password_check {
+  position: absolute;
+  display: none;
+  bottom: 8px;
+  left: 75px;
+  font-size: 11px;
+  padding-top: 10px;
+}
+input[type="password"]:focus ~ .password_check {
+  display: block;
+}
+
+/* check mark */
+.wrapper {
+  position: relative;
+  left: -8px;
+  top: 16px;
+  width: 13px;
+  margin: -14px;
+}
+
+.checkmark {
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 2s ease-out forwards;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.box {
+  transition-timing-function: ease;
+  transition-duration: 5s;
+}
+
+.box > .front {
+  position: absolute;
+  margin-left: 25%;
+  margin-bottom: 25%;
+  height: 200px;
+  width: 200px;
+  background-color: coral;
+  border: 0.5px solid thistle;
+  border-radius: 10px;
+  transform: perspective(800px) rotateY(0deg);
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+.box > .back {
+  position: absolute;
+  margin-left: 25%;
+  margin-bottom: 230px;
+  height: 200px;
+  width: 200px;
+  background-color: coral;
+  border: 0.5px solid thistle;
+  border-radius: 10px;
+  transform: perspective(800px) rotateY(180deg);
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+
+.box:hover > .front {
+  background-color: burlywood;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  transform: perspective(800px) rotateY(-180deg);
+}
+
+.box:hover > .back {
+  background-color: burlywood;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  transform: perspective(800px) rotateY(0deg);
+}
+
+/* .users-card {
+  position: relative;
+  margin-left: 430px;
+  top: -280px;
+  height: 50px;
+  width: 300px;
+  background-color: rgb(209, 137, 135);
+  align-items: center;
+  justify-content: center;
+} */
