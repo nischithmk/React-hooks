@@ -118,7 +118,7 @@ function App() {
       {/* forms */}
       <EmployeeForm />
       {/* useEffect */}
-      {/* <UseEffectFunction /> */}
+      <UseEffectFunction />
 
       {/* useReducer */}
       <UseReducerTest />
