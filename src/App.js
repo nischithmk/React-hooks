@@ -10,6 +10,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import EmployeeForm from "./components/forms";
 import UseRefTest from "./components/useRef";
 import UseReducerTest from "./components/useReducer";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   const [name, setName] = useState(employee);
@@ -44,10 +45,10 @@ function App() {
       <div className="Nav">
         <ul>
           <li>
-            <a href="#box"> Home </a>
+            <Link to="/">Home</Link>
           </li>
           <li className="portfolio_list">
-            <a href="#">Portfolio</a>
+            <Link to="a">Portfolio</Link>
             <ul className="portfolio">
               <li>
                 <a href="#">Futures</a>
@@ -61,10 +62,10 @@ function App() {
             </ul>
           </li>
           <li>
-            <a href="#">Assets</a>
+            <Link to="b">Assets</Link>
           </li>
           <li>
-            <a href="#">Login</a>
+            <Link to="c">Login</Link>
           </li>
         </ul>
         {/* sidebar */}
@@ -116,20 +117,21 @@ function App() {
         })}
       </div>
       {/* forms */}
-      <EmployeeForm />
+      {/* <EmployeeForm /> */}
       {/* useEffect */}
-      <UseEffectFunction />
+      {/* <UseEffectFunction /> */}
 
       {/* useReducer */}
-      <UseReducerTest />
+      {/* <UseReducerTest /> */}
 
       {/* useRef */}
-      <UseRefTest />
+      {/* <UseRefTest /> */}
 
       <div className="box" id="box">
         <div className="back">Back</div>
         <div className="front">Front</div>
       </div>
+      <Outlet />
     </div>
   );
 }

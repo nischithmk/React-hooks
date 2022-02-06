@@ -286,7 +286,9 @@ a:hover {
   position: relative;
   width: 360px;
   height: 385px;
-  top: -680px;
+  /* top: -680px; */
+  top: 20px;
+  z-index: 1;
   margin-left: 750px;
   border-radius: 0px 100px 0px 100px;
   background-color: rgb(190, 241, 241);
@@ -432,13 +434,83 @@ html {
   transform: perspective(800px) rotateY(0deg);
 }
 
-/* .users-card {
+/* lOADING  */
+
+.spinner {
   position: relative;
-  margin-left: 430px;
-  top: -280px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+.bubble-1,
+.bubble-2 {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #4b9cdb;
+}
+
+.bubble-2 {
+  top: auto;
+  bottom: 0;
+}
+
+.load-9 .spinner {
+  animation: loadingI 2s linear infinite;
+}
+.load-9 .bubble-1,
+.load-9 .bubble-2 {
+  animation: bounce 2s ease-in-out infinite;
+}
+.load-9 .bubble-2 {
+  animation-delay: -1s;
+}
+
+@keyframes loadingI {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.Image-container {
+  margin: 20px;
+  height: 200px;
   width: 300px;
-  background-color: rgb(209, 137, 135);
+  background-color: aquamarine;
   align-items: center;
   justify-content: center;
-} */
+}
+
+.Image-container img {
+  height: 200px;
+  width: 200px;
+  /* transition: transform 2s ease-out 5s; */
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+  animation: bounce2 0.5s ease-out;
+}
+
+@keyframes bounce2 {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 200px;
+  }
+}

@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function UseRefTest() {
+  let { name, num } = useParams();
   const [toggle, setToggle] = useState(false);
   const h1ref = useRef(null);
   const handleClick1 = () => {
@@ -17,8 +19,10 @@ function UseRefTest() {
   };
   return (
     <>
-      <h1 ref={h1ref}>hey</h1>
-      <button onClick={toggle ? handleClick1 : handleClick2}> change</button>
+      <h1 ref={h1ref}>
+        {name} {num + num}
+      </h1>
+      <button onClick={toggle ? handleClick1 : handleClick2}> Change</button>
     </>
   );
 }

@@ -1,12 +1,15 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function EmployeeForm() {
+  let navigate = useNavigate();
   var regex = /\d/g;
   var regex2 = /\W|_/g;
   var regex3 = /[a-z].*[A-Z]|[A-Z].*[a-z]/;
 
   const [person, setPerson] = useState({ name: "", email: "", password: "" });
   const [people, setPeople] = useState([]);
+  const animals = ["nis", "nik", "chin"];
 
   const handleChange = (e) => {
     var name = e.target.name;
@@ -21,14 +24,14 @@ function EmployeeForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newPerson = { ...person, id: new Date().getTime().toString() };
-    if (person.name && person.email && person.password) {
-      if (isnumeric && isSpecial && ismore && isuppernlower) {
-        setPeople([...people, newPerson]);
-        setPerson({ name: "", email: "", password: "" });
-      }
-    }
+    // if (person.name && person.email && person.password) {
+    //   if (isnumeric && isSpecial && ismore && isuppernlower) {
+    setPeople([...people, newPerson]);
+    setPerson({ name: "", email: "", password: "" });
+    navigate(`/d`);
+    //   }
+    // }
   };
-
   return (
     <div className="form-container">
       <form className="form">
@@ -192,16 +195,6 @@ function EmployeeForm() {
           </button>
         </div>
       </form>
-
-      {/* <div className="users-card">
-        <h1 style={{ color: person.name.length > 3 ? "green" : "red" }}>
-          {person.name}
-        </h1>
-        {people.map((p) => {
-          console.log(p.name);
-          return <h1>{p.name}</h1>;
-        })}
-      </div> */}
     </div>
   );
 }
